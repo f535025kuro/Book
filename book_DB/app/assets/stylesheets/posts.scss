@@ -1,0 +1,79 @@
+/* 本登録画面 */
+
+#register{
+  min-height: 100vh;
+  width: 1600px;
+  background: url('/drawing-pad-1209781_1922.jpg')  no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+#register form{
+  text-align: center;
+}
+
+#register .form{
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  margin-top: 50px; 
+  display: flex;
+  margin-top: 100px;
+  margin-left: 350px;
+}
+
+#register form .btn{
+  background-color: rgb(255, 226, 7);
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+#register input{
+  width: 300px;
+}
+
+#register .about{
+  height: 300px;
+}
+
+#register .btn{
+  margin-top: 30px;
+}
+
+/* 本詳細画面 */
+
+#detail{
+  min-height: 100vh;
+  width: 1600px;
+  background: url('/diary-3299128_1921.jpg')  no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  position: relative;
+}
+
+#detail .info{
+  text-align: center;
+  padding: 50px;
+  padding-left: 440px;
+  margin: auto;
+  display: flex;
+}
+
+#detail .flex{
+  margin: 100px;
+}
+
+#detail .back{
+  text-align: right;
+  margin: 30px;
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+}

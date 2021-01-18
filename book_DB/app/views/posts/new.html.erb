@@ -1,0 +1,22 @@
+<div class="main" id="register">
+  <div class="info">
+  <%= form_tag("/posts/create") do %>
+   <div class="form">
+     <div class="flex">
+     <p>タイトル</p>
+     <input type="text" name="title">
+     <p>著者名</p>
+    <input type="text" name="author">
+      <p>タグ</p><br>
+      <p>画像を挿入</p>
+     <input type="file" name="avatar"><br>    
+    </div>
+   <div class="flex">
+     <p>概要</p>
+   <textarea class="about" type="text" name="content"></textarea>
+   </div>
+   </div>
+   <input class="btn" type="submit" value="登録する">
+   <% end %>
+   </div>
+</div>

@@ -1,0 +1,168 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2d3133;
+  font-size: 14px;
+}
+
+.main{
+  margin: 0;
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+.main div{
+  margin-top: 0px;
+  padding-top: 30px; 
+  margin-left: 50px;
+  font-family: serif;
+}
+
+.main div h1{
+  font-size: 30px;
+}
+
+.main div ul{
+  font-size: large;
+  list-style: none;
+  padding-top: 10px;
+}
+
+.main a{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.main a:active{
+  color: black;
+}
+
+/* ホーム画面 */
+
+#home{
+  min-height: 100vh;
+  width: 1600px;
+  background: url('/top-view-accessories-for-sewing-and-copy-space.jpg')  no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+#home .keyword{
+  width: 500px;
+  height: 40px;
+}
+
+
+/* マイページ画面 */
+
+#mypage{
+  min-height: 100vh;
+  width: 1600px;
+  background-image: url('img/books-485479_1920.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  margin: 0;
+}
+
+#mypage li{
+  width: 700px;
+  /* text-align: center; */
+  margin-left: 40px;
+  border: 4px solid yellow;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+/* 検索結果画面 */
+
+#result{
+  min-height: 100vh;
+  width: 1600px;
+  background-image: url('img/books-485479_1920.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  margin: 0;
+}
+
+#result li{
+  width: 700px;
+  /* text-align: center; */
+  margin-left: 40px;
+  border: 4px solid yellow;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+#result form{
+  text-align: center;
+}
+
+#result .keyword{
+  width: 500px;
+  height: 40px;
+}
+
+
+
+/*ヘッダー*/
+header {
+  height: 64px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: #FFCC00;
+}
+
+.header-logo {
+  float: left;
+  padding-left: 20px;
+  color: white;
+  font-size: 22px;
+  line-height: 64px;
+}
+
+.header-logo a{
+  color: white;
+  font-size: 22px;
+}
+
+.header-menus {
+  float: right;
+  padding-right: 20px;
+}
+
+.header-menus li {
+  float: left;
+  line-height: 64px;
+  font-size: 13px;
+  color: white;
+  padding-left: 15px;
+}
+
+.header-menus a {
+  float: left;
+  font-size: 13px;
+  color: white;
+}
+
+.header-menus .fa {
+  padding-right: 5px;
+}

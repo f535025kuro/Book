@@ -1,0 +1,14 @@
+<div class="main" id="newcomer">
+  <div class="info">
+      <h1>Book DB</h1>
+      <%= form_tag("/users/create") do %>
+      <p>ユーザー名</p>
+      <input type="text" name="name">
+      <p>mail</p>
+      <input type="text" name="email">
+      <p>パスワード</p>
+      <input name="password" type="password"><br>
+      <input class="btn" type="submit" value="新規登録">
+      <% end %>
+  </div>
+</div>
