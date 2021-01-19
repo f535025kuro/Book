@@ -7,14 +7,16 @@
 <div id="page_top"><a href="#"></a></div>
 
 <div class="main" id ="result">
-
   <div class="container">
+  <h1>自分の本一覧</h1>
     <% @posts.each do |post| %>
       <% if @current_user %>
         <div class="posts-index-item">
+        <ul>
         <% if post.user_id == @current_user.id %>
-        <%= link_to(post.title,"/posts/#{post.id}") %>
+        <li><%= link_to(post.title,"/posts/#{post.id}") %> :  <%= post.author %></li>
         <% end %>
+        </ul>
         </div>
       <% end %>
     <% end %>
