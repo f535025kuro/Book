@@ -1,3 +1,59 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .main{
+    margin: 0px;
+    font-size: 30px;
+  }
+  
+  .main div{
+    margin-top: 0px;
+    padding-top: 30px; 
+    margin-left: 50px;
+    font-family: serif;
+  }
+  
+  .main div h1{
+    font-size: 30px;
+  }
+  
+  .main div ul{
+    font-size: large;
+    list-style: none;
+    padding-top: 10px;
+  }
+  
+  .main a{
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .main a:active{
+    color: black;
+  }
+
+  #mypage{
+    min-height: 100vh;
+    width: 1600px;
+    background: url('/books-485479_1920.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+  }
+  
+  #mypage li{
+    width: 700px;
+    /* text-align: center; */
+    margin-left: 40px;
+    border: 4px solid yellow;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+  }

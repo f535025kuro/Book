@@ -1,18 +1,28 @@
-<div class="main user-show">
+<div class="main" id="mypage">
   <div class="container">
     <div class="user">
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
     </div>
   </div>
-    <% @user.posts.each do |post| %>
-      <div class="posts-index-item">
-        <div class="post-right">
-          <div class="post-user-name">
-            <%= link_to(post.user.name, "/users/#{post.user.id}") %>
-          </div>
-          <%= link_to(post.content, "/posts/#{post.id}") %>
-        </div>
-      </div>
+
+  <div class="add">
+  <h1>最近追加した本</h1>
+    <% @user.regist_histories.each do |regist_history| %>
+        <ul>
+          <li><%= link_to(regist_history.post_title, "/posts/#{regist_history.post_id}") %> : <%= regist_history.post_author %></li>
+        </ul>
     <% end %>
+  </div>
+
+  <div class="search">
+  <h1>最近検索した本</h1>
+  <% @user.browse_histories.each do |browse_history| %>
+      <ul>
+        <li><%= link_to(browse_history.post_title, "/posts/#{browse_history.post_id}") %> : <%= browse_history.post_author %> </li>
+      </ul>
+    <% end %>
+  </div>
+
+
 </div>

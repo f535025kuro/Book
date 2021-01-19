@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+　
+　　<head>
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    </head>
+
+<body>
+
+<div id="page_top"><a href="#"></a></div>
+
+<div class="main" id="result">
+<%= search_form_for @q, url: posts_result_path do |f| %>
+  <%= f.search_field :title_or_author_cont,placeholder: 'キーワード' %>
+  <%= f.submit "検索" %>
+<% end %>
+
+<div class="individual">
+<h1>自分の本棚から</h1>
+<% @results.each do |post| %>
+<% if @current_user %>
+<ul>
+  <% if post.user_id == @current_user.id %>
+  <li><%= link_to(post.title,"/posts/#{post.id}") %> : <%= post.author %></li>
+  <% end %>
+  <% end %>
+</ul>
+<% end %>
+</div>
+
+<div class="entire">
+<h1>他の人の本棚から</h1>
+<% @results.each do |post| %>
+<ul>
+  <% if post.user_id != @current_user.id %>
+  <li><%= link_to(post.title,"/posts/#{post.id}") %> : <%= post.author %></li>
+  <% end %>
+  <% end %>
+  <br>
+</ul>
+</div>
+
+<br>
+
+</body>
+</html>

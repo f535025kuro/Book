@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_16_035134) do
+ActiveRecord::Schema.define(version: 2021_01_19_150604) do
+
+  create_table "browse_histories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "post_id"
+    t.string "post_title"
+    t.string "post_author"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
@@ -19,6 +28,15 @@ ActiveRecord::Schema.define(version: 2021_01_16_035134) do
     t.string "title"
     t.string "author"
     t.integer "user_id"
+  end
+
+  create_table "regist_histories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "post_id"
+    t.string "post_title"
+    t.string "post_author"
   end
 
   create_table "users", force: :cascade do |t|

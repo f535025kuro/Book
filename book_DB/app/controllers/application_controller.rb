@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_current_user
+  before_action :set_search
     def set_current_user
       @current_user = User.find_by(id: session[:user_id])
     end
@@ -16,5 +17,10 @@ class ApplicationController < ActionController::Base
       flash[:notice] ="すでにログインしています"
       redirect_to("/posts/index")
     end
+  end
+
+  def set_search
+    @search = Post.ransack(params[:q])
+    @results = @search.result
   end
 end
